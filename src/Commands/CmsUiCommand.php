@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Lemaur\CmsUi\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class CmsUiCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'cms-ui';
 
     public $description = 'My command';
 
