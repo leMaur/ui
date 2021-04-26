@@ -2,9 +2,9 @@
 
 namespace Lemaur\CmsUi;
 
+use Lemaur\CmsUi\Commands\CmsUiCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Lemaur\CmsUi\Commands\CmsUiCommand;
 
 class CmsUiServiceProvider extends PackageServiceProvider
 {
