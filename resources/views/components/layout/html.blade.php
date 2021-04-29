@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
+    @if($title())
+        <title>{{ $title() }}</title>
+    @endif
+
     {{ $head ?? '' }}
 
     @if($withCsrf())

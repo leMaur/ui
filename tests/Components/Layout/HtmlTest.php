@@ -54,10 +54,21 @@ class HtmlTest extends ComponentTestCase
     public function it_renders_with_title(): void
     {
         $template = <<<'HMTL'
-            <x-layout.html>
-                <x-slot name="head">
-                    <title>Welcome</title>
-                </x-slot>
+            <x-layout.html title="Welcome">
+                <body>
+                    <h1>Hello world!</h1>
+                </body>
+            </x-layout.html>
+            HMTL;
+
+        $this->assertComponentMatches($template);
+    }
+
+    /** @test */
+    public function it_renders_with_title_and_csrf(): void
+    {
+        $template = <<<'HMTL'
+            <x-layout.html title="Welcome" with-csrf>
                 <body>
                     <h1>Hello world!</h1>
                 </body>
