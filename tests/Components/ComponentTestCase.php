@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Components;
 
-use Lemaur\CmsUi\CmsUiServiceProvider;
+use Lemaur\Ui\UiServiceProvider;
 use Orchestra\Testbench\TestCase;
 use Spatie\Snapshots\MatchesSnapshots;
 use Tests\InteractsWithView;
@@ -23,7 +23,7 @@ abstract class ComponentTestCase extends TestCase
 
     protected function getPackageProviders($app): array
     {
-        return [CmsUiServiceProvider::class];
+        return [UiServiceProvider::class];
     }
 
     public function assertComponentMatches(string $template, array $data = []): void

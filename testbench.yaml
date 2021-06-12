@@ -1,2 +1,2 @@
 providers:
-  - Lemaur\CmsUi\CmsUiServiceProvider
+  - Lemaur\Ui\UiServiceProvider

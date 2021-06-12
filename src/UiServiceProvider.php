@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Lemaur\CmsUi;
+namespace Lemaur\Ui;
 
 use Illuminate\View\Compilers\BladeCompiler;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class CmsUiServiceProvider extends PackageServiceProvider
+class UiServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('cms-ui')
+            ->name('ui')
             ->hasConfigFile()
             ->hasViews();
     }
@@ -23,9 +23,9 @@ class CmsUiServiceProvider extends PackageServiceProvider
         parent::bootingPackage();
 
         $this->callAfterResolving(BladeCompiler::class, function (BladeCompiler $blade) {
-            $prefix = (string) config('cms-ui.prefix', '');
+            $prefix = (string) config('ui.prefix', '');
 
-            foreach ((array) config('cms-ui.components', []) as $alias => $component) {
+            foreach ((array) config('ui.components', []) as $alias => $component) {
                 $blade->component($component, $alias, $prefix);
             }
         });

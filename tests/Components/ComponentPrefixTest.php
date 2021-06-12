@@ -10,7 +10,7 @@ class ComponentPrefixTest extends ComponentTestCase
     {
         parent::getEnvironmentSetUp($app);
 
-        $app['config']->set('cms-ui.prefix', 'ui');
+        $app['config']->set('ui.prefix', 'ui');
     }
 
     /** @test */

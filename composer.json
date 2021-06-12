@@ -1,12 +1,15 @@
 {
-    "name": "lemaur/cms-ui",
-    "description": "User Interface for CMS package",
+    "name": "lemaur/ui",
+    "description": "User Interface for Laravel",
     "keywords": [
         "lemaur",
         "laravel",
-        "cms-ui"
+        "user interface",
+        "components",
+        "view",
+        "blade"
     ],
-    "homepage": "https://github.com/lemaur/cms-ui",
+    "homepage": "https://github.com/lemaur/ui",
     "license": "MIT",
     "authors": [
         {
@@ -30,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Lemaur\\CmsUi\\": "src"
+            "Lemaur\\Ui\\": "src"
         }
     },
     "autoload-dev": {
@@ -49,7 +52,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Lemaur\\CmsUi\\CmsUiServiceProvider"
+                "UiServiceProvider"
             ]
         }
     },
