@@ -14,7 +14,7 @@ return [
     */
 
     'components' => [
-        'layout.html' => \Lemaur\CmsUi\Components\Layout\Html::class,
+        'html' => \Lemaur\CmsUi\Components\Layout\Html::class,
     ],
 
     /*
@@ -28,7 +28,7 @@ return [
     |
     | If set with "ui", for example, you can reference components like:
     |
-    | <x-ui-html />
+    | <x-ui-layout.html />
     |
     */
 

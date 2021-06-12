@@ -17,11 +17,11 @@ class ComponentPrefixTest extends ComponentTestCase
     public function it_may_set_a_prefix(): void
     {
         $template = <<<'HTML'
-            <x-ui-layout.html>
+            <x-ui-html>
                 <body>
                     <h1>Hello world!</h1>
                 </body>
-            </x-ui-layout.html>
+            </x-ui-html>
             HTML;
 
         $this->assertComponentMatches($template);
