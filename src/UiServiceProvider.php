@@ -14,7 +14,7 @@ class UiServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('ui')
-            ->hasConfigFile('ui-config')
+            ->hasConfigFile()
             ->hasViews();
     }
 
