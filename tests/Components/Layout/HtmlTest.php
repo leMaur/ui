@@ -77,4 +77,24 @@ class HtmlTest extends ComponentTestCase
 
         $this->assertComponentMatches($template);
     }
+
+    /** @test */
+    public function it_renders_with_head_stack(): void
+    {
+        $template = <<<'HMTL'
+            <x-html>
+                @push('head')
+                <style>
+                    h1 { color: darkseagreen; }
+                </style>
+                @endpush
+
+                <body>
+                    <h1>Hello world!</h1>
+                </body>
+            </x-html>
+            HMTL;
+
+        $this->assertComponentMatches($template);
+    }
 }

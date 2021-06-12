@@ -15,6 +15,7 @@ return [
 
     'components' => [
         'html' => \Lemaur\CmsUi\Components\Layout\Html::class,
+        'body' => \Lemaur\CmsUi\Components\Layout\Body::class,
     ],
 
     /*
