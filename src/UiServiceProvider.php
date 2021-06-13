@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Lemaur\Ui;
 
 use Illuminate\View\Compilers\BladeCompiler;
+use Lemaur\Ui\Console\PublishCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -15,6 +16,7 @@ class UiServiceProvider extends PackageServiceProvider
         $package
             ->name('ui')
             ->hasConfigFile()
+            ->hasCommand(PublishCommand::class)
             ->hasViews();
     }
 
