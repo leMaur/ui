@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lemaur\UI\Console;
+namespace Lemaur\Ui\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -15,7 +15,7 @@ final class PublishCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'interface:publish {component}
+    protected $signature = 'ui:publish {component}
                             {--view : Publish only the view of the component}
                             {--class : Publish only the class of the component}
                             {--force : Overwrite existing files}';
