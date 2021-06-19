@@ -20,7 +20,7 @@ class SearchInput extends Component
         public string $labelClass = '',
         public string $inputWrapperClass = '',
         public string $inputTitle = '',
-        public string $inputClass ='',
+        public string $inputClass = '',
         public string $buttonWrapperClass = '',
         public string $buttonClass = '',
     )
