@@ -21,7 +21,7 @@ class SearchInput extends Component
         public ?string $labelClass = null,
         public ?string $inputWrapperClass = null,
         public ?string $inputTitle = null,
-        public ?string $inputClass =null,
+        public ?string $inputClass = null,
         public ?string $buttonWrapperClass = null,
         public ?string $buttonClass = null,
     )
