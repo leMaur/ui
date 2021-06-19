@@ -6,7 +6,7 @@ namespace Tests\Components\Search;
 
 use Tests\Components\ComponentTestCase;
 
-class SearchInputTest extends ComponentTestCase
+class InputTest extends ComponentTestCase
 {
     /** @test */
     public function it_renders_html(): void

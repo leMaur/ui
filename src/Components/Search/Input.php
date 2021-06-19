@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class SearchInput extends Component
+class Input extends Component
 {
     public function __construct(
         public string $id,
@@ -30,7 +30,7 @@ class SearchInput extends Component
 
     public function render(): View
     {
-        return view('ui::components.search.search-input');
+        return view('ui::components.search.input');
     }
 
     public function labelClass(): string|null
