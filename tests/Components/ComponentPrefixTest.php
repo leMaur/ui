@@ -10,18 +10,18 @@ class ComponentPrefixTest extends ComponentTestCase
     {
         parent::getEnvironmentSetUp($app);
 
-        $app['config']->set('ui.prefix', 'ui');
+        $app['config']->set('ui.prefix', 'custom');
     }
 
     /** @test */
     public function it_may_set_a_prefix(): void
     {
         $template = <<<'HTML'
-            <x-ui-html>
+            <x-custom-html>
                 <body>
                     <h1>Hello world!</h1>
                 </body>
-            </x-ui-html>
+            </x-custom-html>
             HTML;
 
         $this->assertComponentMatches($template);

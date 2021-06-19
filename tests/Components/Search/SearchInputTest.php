@@ -12,7 +12,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_html(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -23,10 +23,25 @@ class SearchInputTest extends ComponentTestCase
     }
 
     /** @test */
+    public function it_renders_with_custom_form_class(): void
+    {
+        $template = <<<'HTML'
+            <x-ui-search-input
+                id="search"
+                action="/search"
+                label="Search"
+                button="Perform Search"
+                class="form-class" />
+            HTML;
+
+        $this->assertComponentMatches($template);
+    }
+
+    /** @test */
     public function it_renders_with_custom_method(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -41,12 +56,12 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_label_wrapper_class(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
                 button="Perform Search"
-                label-wrapper-class="custom-class" />
+                label-wrapper-class="label-wrapper-class" />
             HTML;
 
         $this->assertComponentMatches($template);
@@ -56,7 +71,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_label_visible_to_everyone(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -71,12 +86,13 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_label_class(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
                 button="Perform Search"
-                label-class="custom-class" />
+                :sr-only="false"
+                label-class="label-class" />
             HTML;
 
         $this->assertComponentMatches($template);
@@ -86,12 +102,12 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_input_wrapper_class(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
                 button="Perform Search"
-                input-wrapper-class="custom-class" />
+                input-wrapper-class="input-wrapper-class" />
             HTML;
 
         $this->assertComponentMatches($template);
@@ -101,7 +117,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_input_title(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -116,12 +132,12 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_input_class(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
                 button="Perform Search"
-                input-class="custom-class" />
+                input-class="input-class" />
             HTML;
 
         $this->assertComponentMatches($template);
@@ -131,12 +147,12 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_button_wrapper_class(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
                 button="Perform Search"
-                button-wrapper-class="custom-class" />
+                button-wrapper-class="button-wrapper-class" />
             HTML;
 
         $this->assertComponentMatches($template);
@@ -146,12 +162,12 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_button_class(): void
     {
         $template = <<<'HTML'
-            <x-search-input
+            <x-ui-search-input
                 id="search"
                 action="/search"
                 label="Search"
                 button="Perform Search"
-                button-class="custom-class" />
+                button-class="button-class" />
             HTML;
 
         $this->assertComponentMatches($template);

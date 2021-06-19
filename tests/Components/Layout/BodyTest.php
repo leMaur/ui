@@ -12,9 +12,9 @@ class BodyTest extends ComponentTestCase
     public function it_renders_html(): void
     {
         $template = <<<'HTML'
-            <x-body>
+            <x-ui-body>
                 <h1>Hello world!</h1>
-            </x-body>
+            </x-ui-body>
             HTML;
 
         $this->assertComponentMatches($template);
@@ -24,9 +24,9 @@ class BodyTest extends ComponentTestCase
     public function it_renders_with_class(): void
     {
         $template = <<<'HTML'
-            <x-body class="min-h-screen">
+            <x-ui-body class="min-h-screen">
                 <h1>Hello world!</h1>
-            </x-body>
+            </x-ui-body>
             HTML;
 
         $this->assertComponentMatches($template);
@@ -36,7 +36,7 @@ class BodyTest extends ComponentTestCase
     public function it_renders_with_body_stack(): void
     {
         $template = <<<'HTML'
-            <x-body class="min-h-screen">
+            <x-ui-body class="min-h-screen">
                 <h1>Hello world!</h1>
 
                 @push('body')
@@ -44,7 +44,7 @@ class BodyTest extends ComponentTestCase
                     document.querySelector('h1')
                 </script>
                 @endpush
-            </x-body>
+            </x-ui-body>
             HTML;
 
         $this->assertComponentMatches($template);

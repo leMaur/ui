@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Lemaur\Ui\Components\Search;
 
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
@@ -15,14 +16,14 @@ class SearchInput extends Component
         public string $label,
         public string $button,
         public string $method = 'POST',
-        public string $labelWrapperClass = '',
+        public ?string $labelWrapperClass = null,
         public bool $srOnly = true,
-        public string $labelClass = '',
-        public string $inputWrapperClass = '',
-        public string $inputTitle = '',
-        public string $inputClass ='',
-        public string $buttonWrapperClass = '',
-        public string $buttonClass = '',
+        public ?string $labelClass = null,
+        public ?string $inputWrapperClass = null,
+        public ?string $inputTitle = null,
+        public ?string $inputClass =null,
+        public ?string $buttonWrapperClass = null,
+        public ?string $buttonClass = null,
     )
     {
     }
@@ -30,5 +31,16 @@ class SearchInput extends Component
     public function render(): View
     {
         return view('ui::components.search.search-input');
+    }
+
+    public function labelClass(): string|null
+    {
+        $class = Str::of($this->labelClass . ($this->srOnly ? 'sr-only' : ''))->trim();
+
+        if ($class->isEmpty()) {
+            return null;
+        }
+
+        return $class->__toString();
     }
 }
