@@ -12,7 +12,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_html(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -26,7 +26,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_method(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -41,7 +41,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_label_wrapper_class(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -56,7 +56,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_label_visible_to_everyone(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -71,7 +71,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_label_class(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -86,7 +86,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_input_wrapper_class(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -101,7 +101,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_input_title(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -116,7 +116,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_input_class(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -131,7 +131,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_button_wrapper_class(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"
@@ -146,7 +146,7 @@ class SearchInputTest extends ComponentTestCase
     public function it_renders_with_custom_button_class(): void
     {
         $template = <<<'HTML'
-            <x-search.input
+            <x-search-input
                 id="search"
                 action="/search"
                 label="Search"

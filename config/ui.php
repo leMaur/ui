@@ -19,7 +19,7 @@ return [
         'html' => \Lemaur\Ui\Components\Layout\Html::class,
         'body' => \Lemaur\Ui\Components\Layout\Body::class,
 
-        'search.input' => \Lemaur\Ui\Components\Search\SearchInput::class,
+        'search-input' => \Lemaur\Ui\Components\Search\SearchInput::class,
 
 //        'layout-guest' => \Lemaur\Ui\Components\Layout\Guest::class,
 //        'layout-app' => \Lemaur\Ui\Components\Layout\App::class,
