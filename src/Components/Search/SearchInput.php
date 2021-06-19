@@ -33,7 +33,7 @@ class SearchInput extends Component
         return view('ui::components.search.search-input');
     }
 
-    public function labelClass(): string|null
+    public function labelClass(): string | null
     {
         $class = Str::of($this->labelClass . ($this->srOnly ? 'sr-only' : ''))->trim();
 
