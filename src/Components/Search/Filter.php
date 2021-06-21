@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lemaur\Ui\Components\Search;
 
 use Illuminate\Support\Arr;
@@ -21,14 +23,11 @@ class Filter extends Component
         public ?string $titleClass = null,
         public ?string $triggerClass = null,
         public ?string $submitClass = null,
-
         public ?string $filterWrapperClass = null,
         public ?string $filterClass = null,
-
         public ?string $itemWrapperClass = null,
         public ?string $itemClass = null,
         public ?string $labelClass = null,
-
         public ?string $triggerDusk = null,
         public ?string $submitDusk = null,
         public ?string $filterDusk = null,

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Components\Search;
 
 use Tests\Components\ComponentTestCase;
