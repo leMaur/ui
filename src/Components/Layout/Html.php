@@ -9,7 +9,7 @@ use Illuminate\View\View;
 
 class Html extends Component
 {
-    public function __construct(private bool $withCsrf = false, private ?string $title = null)
+    public function __construct(public bool $withCsrf = false, public ?string $title = null)
     {
     }
 
