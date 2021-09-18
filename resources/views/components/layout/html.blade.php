@@ -22,5 +22,4 @@
     @stack('head')
 </head>
 {{ $slot }}
-@stack('body')
 </html>
