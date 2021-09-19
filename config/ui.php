@@ -19,6 +19,11 @@ return [
         'html' => \Lemaur\Ui\Components\Layout\Html::class,
         'body' => \Lemaur\Ui\Components\Layout\Body::class,
 
+        'navigation' => \Lemaur\Ui\Components\Navigation\Nav::class,
+        'navigation-trigger' => \Lemaur\Ui\Components\Navigation\NavTrigger::class,
+        'navigation-list' => \Lemaur\Ui\Components\Navigation\NavList::class,
+        'navigation-list-item' => \Lemaur\Ui\Components\Navigation\NavItem::class,
+
         'search-input' => \Lemaur\Ui\Components\Search\Input::class,
         'search-filter' => \Lemaur\Ui\Components\Search\Filter::class,
     ],
