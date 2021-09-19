@@ -1,12 +1,14 @@
 <li {{ $attributes }}>
-    <a class="{{ $classLink }}"
-       href="{{ $href() }}"
-       @if($isCurrent())
-           aria-current="page"
-       @endif
-    >
-        {{ $value ?? $slot }}
-    </a>
-
-    {{ $subItem }}
+    @unless($sunItem)
+        <a class="{{ $classLink }}"
+           href="{{ $href() }}"
+           @if($isCurrent())
+               aria-current="page"
+           @endif
+        >
+            {{ $value ?? $slot }}
+        </a>
+    @else
+        {{ $subItem }}
+    @endunless
 </li>

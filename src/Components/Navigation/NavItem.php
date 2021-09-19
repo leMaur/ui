@@ -11,7 +11,7 @@ use Illuminate\View\View;
 class NavItem extends Component
 {
     public function __construct(
-        public string $href,
+        public ?string $href = null,
         public ?string $value = null,
         public ?string $classLink = null,
         public ?string $subItem = null,
