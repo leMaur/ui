@@ -1,12 +1,12 @@
 <li {{ $attributes }}>
-    @unless($href && ($value || $slot))
+    @unless($href && $value)
         <a class="{{ $classLink }}"
            href="{{ $href() }}"
            @if($isCurrent())
                aria-current="page"
            @endif
         >
-            {{ $value ?? $slot }}
+            {{ $value }}
         </a>
     @else
         {{ $slot }}
