@@ -14,7 +14,6 @@ class NavItem extends Component
         public ?string $href = null,
         public ?string $value = null,
         public ?string $classLink = null,
-        public ?string $subItem = null,
     )
     {}
 

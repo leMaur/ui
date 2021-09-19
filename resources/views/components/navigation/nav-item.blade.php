@@ -1,5 +1,5 @@
 <li {{ $attributes }}>
-    @unless($sunItem)
+    @unless($href && ($value || $slot))
         <a class="{{ $classLink }}"
            href="{{ $href() }}"
            @if($isCurrent())
@@ -9,6 +9,6 @@
             {{ $value ?? $slot }}
         </a>
     @else
-        {{ $subItem }}
+        {{ $slot }}
     @endunless
 </li>
