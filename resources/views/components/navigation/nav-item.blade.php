@@ -1,5 +1,5 @@
 <li {{ $attributes }}>
-    @unless($href && $value)
+    @if($href)
         <a class="{{ $classLink }}"
            href="{{ $href }}"
            @if($isCurrent())
@@ -10,5 +10,5 @@
         </a>
     @else
         {{ $slot }}
-    @endunless
+    @endif
 </li>
