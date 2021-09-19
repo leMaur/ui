@@ -1,7 +1,7 @@
 <li {{ $attributes }}>
     @unless($href && $value)
         <a class="{{ $classLink }}"
-           href="{{ $href() }}"
+           href="{{ $href }}"
            @if($isCurrent())
                aria-current="page"
            @endif

@@ -22,13 +22,8 @@ class NavItem extends Component
         return view('ui::components.navigation.nav-item');
     }
 
-    public function href(): string
-    {
-        return URL::isValidUrl($this->href) ? $this->href : route($this->href);
-    }
-
     public function isCurrent(): bool
     {
-        return URL::current() === $this->href();
+        return URL::current() === $this->href;
     }
 }
