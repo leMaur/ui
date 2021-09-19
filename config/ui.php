@@ -19,6 +19,8 @@ return [
         'html' => \Lemaur\Ui\Components\Layout\Html::class,
         'body' => \Lemaur\Ui\Components\Layout\Body::class,
 
+        'logout' => \Lemaur\Ui\Components\Logout::class,
+
         'navigation' => \Lemaur\Ui\Components\Navigation\Nav::class,
         'navigation-trigger' => \Lemaur\Ui\Components\Navigation\NavTrigger::class,
         'navigation-list' => \Lemaur\Ui\Components\Navigation\NavList::class,
