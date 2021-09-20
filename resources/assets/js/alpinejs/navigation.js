@@ -1,12 +1,12 @@
-export default () => ({
+export default (menuList = null) => ({
     open: false,
 
     toggle() {
         this.open = ! this.open
 
-        // if (menu) {
-        //     this.$refs[menu].querySelector(':not([disabled])').focus()
-        // }
+        if (this.open && menuList) {
+            this.$nextTick(() => this.$refs[menuList].querySelector('a:not([disabled])').focus())
+        }
     },
 
     trigger: {
