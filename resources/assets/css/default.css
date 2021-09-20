@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+    /* Alpine.js */
+    [x-cloak] {
+        display: none !important;
+    }
+
+    *, html, body, p, a, button {
+        @apply tracking-normal;
+    }
+
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+
+    b, strong {
+        @apply font-bold;
+    }
+
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer utilities {
+    .text-rendering-speed { text-rendering: optimizeSpeed; }
+}
