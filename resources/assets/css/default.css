@@ -3,17 +3,15 @@
 @import "tailwindcss/utilities";
 
 @layer base {
-    /* Alpine.js */
-    [x-cloak] {
-        display: none !important;
-    }
-
-    *, html, body, p, a, button {
-        @apply tracking-normal;
-    }
-
+    /*
+     * Generics
+     */
     html:focus-within {
         scroll-behavior: smooth;
+    }
+    
+    *, html, body, p, a, button {
+        @apply tracking-normal;
     }
 
     b, strong {
@@ -24,6 +22,37 @@
         text-decoration-skip-ink: auto;
     }
 
+    /*
+     * Alpine.js
+     */
+     [x-cloak] {
+        display: none !important;
+    }
+
+    /* 
+     * Inert.js
+     *
+     * Inert will dynamically inject those CSS in the page,
+     * which can break the CSP style-src rule.
+     * 
+     * To avoid to use `unsafe-inline` we add those CSS manually.
+     */
+    [inert] {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    [inert], [inert] * {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+      
+
+    /*
+     * Take care of reduce motion preference
+     */
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
             animation-duration: 0.01ms !important;
