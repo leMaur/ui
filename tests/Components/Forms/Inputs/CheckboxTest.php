@@ -29,14 +29,18 @@ class CheckboxTest extends ComponentTestCase
     }
 
     /** @test */
-    public function it_renders_with_old_values(): void
+    public function it_renders_with_value(): void
     {
         $template = <<<'HTML'
         <x-ui-checkbox name="save_me" value="true" />
         HTML;
 
         $this->assertComponentMatches($template);
+    }
 
+    /** @test */
+    public function it_renders_with_old_values(): void
+    {
         $this->flashOld(['save_me' => true]);
 
         $template = <<<'HTML'

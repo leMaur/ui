@@ -29,14 +29,18 @@ class InputTest extends ComponentTestCase
     }
 
     /** @test */
-    public function it_renders_with_old_values(): void
+    public function it_renders_with_value(): void
     {
         $template = <<<'HTML'
         <x-ui-input name="username" value="johndoe" />
         HTML;
 
         $this->assertComponentMatches($template);
+    }
 
+    /** @test */
+    public function it_renders_with_old_value(): void
+    {
         $this->flashOld(['username' => 'johndoe']);
 
         $template = <<<'HTML'

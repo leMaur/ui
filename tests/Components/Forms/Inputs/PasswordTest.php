@@ -19,7 +19,7 @@ class PasswordTest extends ComponentTestCase
     }
 
     /** @test */
-    public function it_renders_with_old_values(): void
+    public function it_renders_with_old_value(): void
     {
         $this->flashOld(['password' => 'abc123']);
 
