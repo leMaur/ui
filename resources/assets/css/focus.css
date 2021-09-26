@@ -1,0 +1,25 @@
+@layer base {
+    *:focus {
+        @apply custom-focus;
+    }
+
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer utilities {
+    .custom-focus, .focus-within\:custom-focus:focus-within {
+        @apply outline-none ring-1 ring-gray-600 ring-opacity-50;
+    }
+
+    .no-focus:focus {
+        @apply ring-0;
+    }
+}
