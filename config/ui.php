@@ -21,6 +21,8 @@ return [
 
         'logout' => \Lemaur\Ui\Components\Logout::class,
 
+        'form' => \Lemaur\Ui\Components\Inputs\Form::class,
+
         'navigation' => \Lemaur\Ui\Components\Navigation\Nav::class,
         'navigation-trigger' => \Lemaur\Ui\Components\Navigation\NavTrigger::class,
         'navigation-list' => \Lemaur\Ui\Components\Navigation\NavList::class,
