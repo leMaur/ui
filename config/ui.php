@@ -28,6 +28,7 @@ return [
         'checkbox' => \Lemaur\Ui\Components\Forms\Inputs\Checkbox::class,
         'email' => \Lemaur\Ui\Components\Forms\Inputs\Password::class,
         'password' => \Lemaur\Ui\Components\Forms\Inputs\Password::class,
+        'textarea' => \Lemaur\Ui\Components\Forms\Inputs\Textarea::class,
 
         'navigation' => \Lemaur\Ui\Components\Navigation\Nav::class,
         'navigation-trigger' => \Lemaur\Ui\Components\Navigation\NavTrigger::class,
