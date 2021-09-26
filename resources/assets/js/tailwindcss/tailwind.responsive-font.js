@@ -10,7 +10,7 @@ module.exports = plugin(function ({ addBase, theme }) {
             '--min-fs-rem': 'calc(var(--min-fs) * 1rem)',
             '--max-fs-rem': 'calc(var(--max-fs) * 1rem)',
             '--min-vw-rem': 'calc(var(--min-vw) * 1rem)',
-            '--slope': 'calc(var(--max-fs) - var(--min-fs)) * calc(100vw - var(--min-vw-rem)) / calc(var(--max-vw) - var(--min-vw))',
+            '--slope': 'calc(calc(var(--max-fs) - var(--min-fs)) * calc(100vw - var(--min-vw-rem)) / calc(var(--max-vw) - var(--min-vw)))',
             'font-size': 'clamp(var(--min-fs-rem), calc(var(--min-fs-rem) + var(--slope)), var(--max-fs-rem))',
         },
     })
