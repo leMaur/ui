@@ -32,4 +32,11 @@ abstract class ComponentTestCase extends TestCase
 
         $this->assertMatchesHtmlSnapshot($html);
     }
+
+    protected function flashOld(array $input): void
+    {
+        session()->flashInput($input);
+
+        request()->setLaravelSession(session());
+    }
 }

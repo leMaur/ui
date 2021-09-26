@@ -6,23 +6,13 @@ namespace Tests\Components\Forms\Inputs;
 
 use Tests\Components\ComponentTestCase;
 
-class InputTest extends ComponentTestCase
+class CheckboxTest extends ComponentTestCase
 {
     /** @test */
     public function it_renders_html(): void
     {
         $template = <<<'HTML'
-        <x-ui-input name="username" />
-        HTML;
-
-        $this->assertComponentMatches($template);
-    }
-
-    /** @test */
-    public function it_renders_with_type_password(): void
-    {
-        $template = <<<'HTML'
-        <x-ui-input name="password" type="password" autocomplete="current-password" />
+        <x-ui-checkbox name="save_me" />
         HTML;
 
         $this->assertComponentMatches($template);
@@ -32,15 +22,15 @@ class InputTest extends ComponentTestCase
     public function it_renders_with_old_values(): void
     {
         $template = <<<'HTML'
-        <x-ui-input name="username" value="johndoe" />
+        <x-ui-checkbox name="save_me" value="true" />
         HTML;
 
         $this->assertComponentMatches($template);
 
-        $this->flashOld(['username' => 'johndoe']);
+        $this->flashOld(['save_me' => true]);
 
         $template = <<<'HTML'
-        <x-ui-input name="username" />
+        <x-ui-checkbox name="save_me" />
         HTML;
 
         $this->assertComponentMatches($template);
