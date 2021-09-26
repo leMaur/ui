@@ -25,9 +25,9 @@ return [
         'error' => \Lemaur\Ui\Components\Forms\Error::class,
         'label' => \Lemaur\Ui\Components\Forms\Label::class,
         'input' => \Lemaur\Ui\Components\Forms\Inputs\Input::class,
-        'checkbox' => \Lemaur\Ui\Components\Forms\Inputs\Radio::class,
+        'checkbox' => \Lemaur\Ui\Components\Forms\Inputs\Checkbox::class,
         'radio' => \Lemaur\Ui\Components\Forms\Inputs\Radio::class,
-        'email' => \Lemaur\Ui\Components\Forms\Inputs\Password::class,
+        'email' => \Lemaur\Ui\Components\Forms\Inputs\Email::class,
         'password' => \Lemaur\Ui\Components\Forms\Inputs\Password::class,
         'textarea' => \Lemaur\Ui\Components\Forms\Inputs\Textarea::class,
 
