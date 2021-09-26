@@ -24,6 +24,7 @@ return [
         'form' => \Lemaur\Ui\Components\Forms\Form::class,
         'error' => \Lemaur\Ui\Components\Forms\Error::class,
         'label' => \Lemaur\Ui\Components\Forms\Label::class,
+        'input' => \Lemaur\Ui\Components\Forms\Inputs\Input::class,
 
         'navigation' => \Lemaur\Ui\Components\Navigation\Nav::class,
         'navigation-trigger' => \Lemaur\Ui\Components\Navigation\NavTrigger::class,
