@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Lemaur\Ui\Components\Forms;
 
-use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 

@@ -15,6 +15,7 @@ class Input extends Component
         public ?string $id = null,
         public string $type = 'text',
         public ?string $value = null,
+        public bool $autofocus = false,
     )
     {
         $this->type = Str::lower($type);

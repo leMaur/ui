@@ -5,5 +5,8 @@
     @if($value())
         value="{{ $value() }}"
     @endif
-    {{ $attributes }}
+    @if($autofocus)
+        autofocus
+    @endif
+    {{ $attributes->except(['autofocus']) }}
 />
