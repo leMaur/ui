@@ -11,6 +11,7 @@
     }
 
     a {
+        @apply underline hover:no-underline;
         text-decoration-skip-ink: auto;
     }
 
