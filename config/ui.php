@@ -21,6 +21,7 @@ return [
 
         'logout' => \Lemaur\Ui\Components\Logout::class,
         'link' => \Lemaur\Ui\Components\Link::class,
+        'button' => \Lemaur\Ui\Components\Button::class,
 
         'form' => \Lemaur\Ui\Components\Forms\Form::class,
         'error' => \Lemaur\Ui\Components\Forms\Error::class,
