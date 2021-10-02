@@ -5,7 +5,7 @@
     @if($value())
         value="{{ $value() }}"
     @endif
-    @if($checked)
+    @if($checked())
         checked
     @endif
     {{ $attributes }}

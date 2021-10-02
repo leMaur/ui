@@ -29,6 +29,11 @@ class Radio extends Component
 
     public function value(): mixed
     {
-        return old($this->name, $this->value);
+        return old($this->id(), $this->value);
+    }
+
+    public function checked(): bool
+    {
+        return $this->checked;
     }
 }
