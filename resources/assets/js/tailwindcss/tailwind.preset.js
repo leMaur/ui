@@ -38,6 +38,7 @@ module.exports = {
         require('./tailwind.responsive-font'),
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/forms'),
+        require('@tailwindcss/line-clamp'),
         require('@tailwindcss/typography'),
     ],
 }

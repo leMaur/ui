@@ -15,6 +15,7 @@ $ npm i -D  \
     @tailwindcss/aspect-ratio \
     @tailwindcss/forms \
     @tailwindcss/typography \
+    @tailwindcss/line-clamp \
     postcss-import@latest \
     postcss@latest \
     autoprefixer@latest
