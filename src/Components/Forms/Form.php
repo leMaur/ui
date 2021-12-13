@@ -11,12 +11,14 @@ use Illuminate\View\View;
 class Form extends Component
 {
     public function __construct(
-        public string $action,
-        public string $method = 'POST',
+        public ?string $action = null,
+        public ?string $method = null,
         public bool $hasFiles = false,
     )
     {
-        $this->method = Str::upper($method);
+        if ($this->method !== null) {
+            $this->method = Str::upper($method);
+        }
     }
 
     public function render(): View

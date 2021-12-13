@@ -18,7 +18,8 @@ $ npm i -D  \
     @tailwindcss/line-clamp \
     postcss-import@latest \
     postcss@latest \
-    autoprefixer@latest
+    autoprefixer@latest \
+    mapbox-gl
 ```
 
 1. Configure your `webpack.mix.js` file
