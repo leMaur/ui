@@ -20,6 +20,7 @@ return [
         'body' => \Lemaur\Ui\Components\Layout\Body::class,
 
         'logout' => \Lemaur\Ui\Components\Logout::class,
+        'dropdown' => \Lemaur\Ui\Components\Dropdown::class,
 
         'form' => \Lemaur\Ui\Components\Forms\Form::class,
         'error' => \Lemaur\Ui\Components\Forms\Error::class,
