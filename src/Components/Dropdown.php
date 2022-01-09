@@ -9,8 +9,20 @@ use Illuminate\View\View;
 
 class Dropdown extends Component
 {
+    public function __construct(
+        public string $button,
+        public string $panel,
+        public bool $isNav = false,
+    )
+    {}
+
     public function render(): View
     {
         return view('ui::components.dropdown');
+    }
+
+    public function tag(): string
+    {
+        return $this->isNav ? 'nav' : 'div';
     }
 }
