@@ -10,11 +10,9 @@ use Illuminate\View\View;
 class Dropdown extends Component
 {
     public function __construct(
-        public string $button,
-        public string $panel,
+        public ?string $button = null,
         public bool $isNav = false,
-    )
-    {}
+    ){}
 
     public function render(): View
     {
