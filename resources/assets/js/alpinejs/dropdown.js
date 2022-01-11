@@ -1,5 +1,6 @@
 export default () => ({
     open: false,
+    _id: this.$id('dropdown-button'),
 
     toggle() {
         if (this.open) {
@@ -26,13 +27,13 @@ export default () => ({
             return this.open
         },
         ['x-bind:aria-controls']() {
-            return this.$id('dropdown-button')
+            return this._id
         },
     },
 
     panel: {
         ['x-bind:id']() {
-            return this.$id('dropdown-button')
+            return this._id
         },
         ['x-bind:style']() {
             return 'display:none;'
@@ -53,7 +54,7 @@ export default () => ({
             ! this.$refs.panel.contains(this.$event.target) && this.close()
         },
         ['x-bind:id']() {
-            return this.$id('dropdown-button')
+            return this._id
         },
     }
 })
