@@ -1,13 +1,11 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         './storage/framework/views/*.php',
         './resources/**/*.blade.php',
         './resources/**/*.js',
     ],
-    darkMode: 'class',
     theme: {
         extend: {},
         screens: {
@@ -21,7 +19,7 @@ module.exports = {
             current: 'currentColor',
             black: colors.black,
             white: colors.white,
-            gray: colors.warmGray,
+            gray: colors.stone,
             red: colors.red,
         },
         'responsive-font': {
@@ -30,9 +28,6 @@ module.exports = {
             'min-vw': '20', // 320px
             'max-vw': '45', // 720px
         }
-    },
-    variants: {
-        extend: {},
     },
     plugins: [
         require('./tailwind.responsive-font'),
