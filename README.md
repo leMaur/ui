@@ -49,11 +49,9 @@ mix
 1. Configure your `tailwind.config.js` file.
 
 ```js
-const tailwindPreset = require('./vendor/lemaur/ui/resources/assets/js/tailwindcss/tailwind.preset')
-
 module.exports = {
     presets: [
-        tailwindPreset,
+        require('./vendor/lemaur/ui/resources/assets/js/tailwindcss/tailwind.preset'),
     ],
     theme: {
         extend: {},
@@ -93,10 +91,10 @@ module.exports = {
 import Alpine from "alpinejs"
 import intersect from "@alpinejs/intersect"
 import persist from "@alpinejs/persist"
-import trap from "@alpinejs/trap"
+import focus from "@alpinejs/focus"
 
 /**
- * Import ALpine custom plugins, components, etc from UI library
+ * Import Alpine custom plugins, components, etc from UI library
  */
 import navigation from "@ui/alpinejs/navigation.js"
 
@@ -105,7 +103,7 @@ import navigation from "@ui/alpinejs/navigation.js"
  */
 Alpine.plugin(intersect)
 Alpine.plugin(persist)
-Alpine.plugin(trap)
+Alpine.plugin(focus)
 
 /**
  * Define Alpine Components
@@ -115,7 +113,7 @@ Alpine.data('navigation', navigation)
 /**
  * Make Alpine available as global object
  */
-// window.Alpine = Alpine
+window.Alpine = Alpine
 
 Alpine.start()
 ```
