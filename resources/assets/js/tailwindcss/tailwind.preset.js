@@ -11,8 +11,6 @@ module.exports = {
         screens: {
             'tablet': '48em', // '768px',
             'desktop': '64em', // '1024px',
-            'landscape': { 'raw': '(orientation: landscape)' },
-            'print': { 'raw': 'print' },
         },
         colors: {
             transparent: 'transparent',
